@@ -5,10 +5,274 @@
         <meta name="viewport">
         <title>Proton - Your Online Privacy, by Default</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
         
     </head>
     <body>
-        <img src="./images/background.webp" alt="">
-        <img src="./images/backgound2.avif" alt="">
+        <header>
+            <nav>
+                <div class="nav-left">
+                    <div class="logo">
+                        <ul>
+                            <li>
+                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjkwIiBoZWlnaHQ9IjE3NSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBjbGlwLXBhdGg9InVybCgjYSkiIGZpbGw9IiM2RDRBRkYiPjxwYXRoIGQ9Ik0xNDEuOTQyIDE3Mi4yNjh2LTY4LjM0MWMwLTI3Ljg4MiAxNi4zMzYtNTAuMDg3IDQ5LjAxMy01MC4wODdhNjIuOTA1IDYyLjkwNSAwIDAgMSAxNS41NzkgMS43MjVWODMuNjhjLTMuNzEzLS4yNDYtNi45MjQtLjI0Ni04LjQxMy0uMjQ2LTE3LjMxIDAtMjQuNzUzIDcuODkzLTI0Ljc1MyAyMy45MzF2NjQuOTAzaC0zMS40MjZaTTIxNS45NDIgMTE0LjMwNWMwLTM0LjI5NiAyNS45OTEtNjAuNDQ4IDYyLjEzNC02MC40NDhzNjIuMTI1IDI2LjEzNSA2Mi4xMjUgNjAuNDQ4LTI1Ljk5IDYwLjY3Ni02Mi4xMjkgNjAuNjc2Yy0zNi4xMzkgMC02Mi4xMy0yNi4zOTgtNjIuMTMtNjAuNjc2Wm05My4zMjIgMGMwLTE5LjQ5My0xMy4xMjEtMzMuMzA4LTMxLjE4OC0zMy4zMDhzLTMxLjE5MyAxMy44MDMtMzEuMTkzIDMzLjMwOGMwIDE5LjczOCAxMy4xMjEgMzMuMzA4IDMxLjE5MyAzMy4zMDggMTguMDcyIDAgMzEuMTg0LTEzLjU4NyAzMS4xODQtMzMuMzA4aC4wMDRaTTQzMS4yOTEgODEuMjI1SDM5Ny4zOHY0My4xNzdjMCAxNS4wNSA1LjQ0NCAyMS45NiAyMS4wNDEgMjEuOTYgMS40ODQgMCA1LjE5MyAwIDkuOTAxLS4yNDZ2MjUuNDE1Yy02LjQzNSAxLjcyNS0xMi4xMTcgMi43MTMtMTguMzE4IDIuNzEzLTI2LjIzOCAwLTQ0LjA2My0xNS43OTItNDQuMDYzLTQ1LjY0NVY4MS4yMjZoLTIxLjA0VjU2LjMwNmg1LjI0NWExNS44MzYgMTUuODM2IDAgMCAwIDExLjE3NS00LjYxNyAxNS43IDE1LjcgMCAwIDAgNC42Mi0xMS4xNDR2LTIzLjQ3aDMxLjQzOXYzOS4yMzFoMzMuOTExdjI0LjkxOFpNNDQwLjY5NCAxMTQuMzA1YzAtMzQuMjk2IDI1Ljk5MS02MC40NDggNjIuMTM0LTYwLjQ0OCAzNi4xNDQgMCA2Mi4xMyAyNi4xMzUgNjIuMTMgNjAuNDQ4cy0yNS45OTEgNjAuNjkzLTYyLjEzIDYwLjY5M2MtMzYuMTM4IDAtNjIuMTM0LTI2LjQxNS02Mi4xMzQtNjAuNjkzWm05My4zMTggMGMwLTE5LjQ5My0xMy4xMjEtMzMuMzA4LTMxLjE4OC0zMy4zMDhzLTMxLjE5MiAxMy44MDItMzEuMTkyIDMzLjMwOGMwIDE5LjczOCAxMy4xMjEgMzMuMzA4IDMxLjE5MiAzMy4zMDggMTguMDcyIDAgMzEuMTg4LTEzLjU4OCAzMS4xODgtMzMuMzA4Wk01ODEuMjk0IDE3Mi4yNjh2LTY1Ljg3NGMwLTMwLjU5NSAxOS41NTYtNTIuNTU0IDU0LjQ1OC01Mi41NTQgMzQuNjU0IDAgNTQuMjEgMjEuOTYgNTQuMjEgNTIuNTU0djY1Ljg3NGgtMzEuMTg4di02My40MDdjMC0xNy4wMi03LjY3Ny0yNy42MzEtMjMuMDIyLTI3LjYzMS0xNS4zNDYgMC0yMy4wMjMgMTAuNjEtMjMuMDIzIDI3LjYzMXY2My40MDdoLTMxLjQzNVpNMCAxMjcuNDA1djQ0Ljg1OWgzMS41OXYtNDIuOTE4YzAtNC4xNzYgMS42NjUtOC4xOCA0LjYyNy0xMS4xMzNhMTUuODIgMTUuODIgMCAwIDEgMTEuMTY5LTQuNjExaDMyLjM5MWE1Ny4wODcgNTcuMDg3IDAgMCAwIDQwLjI4NS0xNi42NDIgNTYuNzExIDU2LjcxMSAwIDAgMCAxNi42ODctNDAuMTU3QTU2LjcwOCA1Ni43MDggMCAwIDAgMTIwLjA2IDE2LjY0IDU3LjA4MiA1Ny4wODIgMCAwIDAgNzkuNzY5IDBIMHY1Ni4wNzRoMzEuNTlWMjkuNjM3aDQ2LjA1YTI3LjAxIDI3LjAxIDAgMCAxIDE5LjA2MyA3Ljg3IDI2LjgzIDI2LjgzIDAgMCAxIDcuOTAxIDE4Ljk5OCAyNi44MzMgMjYuODMzIDAgMCAxLTcuODk4IDE5LjAwNSAyNy4wMSAyNy4wMSAwIDAgMS0xOS4wNjcgNy44NzJINDQuMTYzYTQ0LjI2NiA0NC4yNjYgMCAwIDAtMTYuOTA0IDMuMzQ1IDQ0LjE1IDQ0LjE1IDAgMCAwLTE0LjMzMSA5LjU0MyA0My45ODcgNDMuOTg3IDAgMCAwLTkuNTcyIDE0LjI4NUE0My44NzEgNDMuODcxIDAgMCAwIDAgMTI3LjQwNVoiLz48L2c+PGRlZnM+PGNsaXBQYXRoIGlkPSJhIj48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCAwaDY5MHYxNzVIMHoiLz48L2NsaXBQYXRoPjwvZGVmcz48L3N2Zz4=" 
+                                width="100" alt="">
+                            </li>
+                            <li><a href="https://proton.me/privacy">Security & Privacy</a></li>
+                            <li>Products</li>
+                            <li><a href="https://proton.me/pricing">Pricing</a></li>
+                            <li>Who we are</li>
+                            <li>Resources</li>
+                            <li><a href="https://proton.me/business">For Business</a></li>
+                        </ul>
+                        
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <button class="button white"><a href="https://account.proton.me/login?language=en">Sign in</a></button>
+                    <button class="button"><a href="https://proton.me/pricing">Create a free account</a></button>
+                </div>
+            </nav>
+        </header>
+        <div class="sections">
+            <div class="section-one-container">
+                <div class="section-one">
+                    <div class="intro-container">
+                        <p>Proton is privacy by default</p>
+                        <h1 style="font-weight: 400;">Welcome to a better internet where <strong>privacy and freedom come first</strong></h1>
+                        <div class="intro icons">
+                            <div class="icon"><a href="https://proton.me/mail">
+                                <img src="./images/1mail.svg" alt="">
+                                <p>Mail</p>
+                            </a></div>
+                            <div class="icon"><a href="https://proton.me/calendar">
+                                <img src="./images/2calendar.svg" alt="">
+                                <p>Calendar</p>
+                            </a></div>
+                            <div class="icon"><a href="https://proton.me/drive">
+                                <img src="./images/3drive.svg" alt="">
+                                <p>Drive</p>
+                            </a></div>
+                            <div class="icon"><a href="https://protonvpn.com/">
+                                <img src="./images/4vpn.svg" alt="">
+                                <p>VPN</p>
+                            </a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-two-container">
+                <div class="section-two">
+                    <img src="./images/backgound2.avif" alt="">
+                    <div class="boxs2">
+                        <h3>With Proton, your data belongs to you, not tech companies, governments, or hackers</h3>
+                        <p>Our encrypted services help you fight for a better internet that is secure and private by default. </p>
+                        <button class="button"><a href="https://proton.me/privacy">Explore security and privacy</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="section-three-container">
+                <div class="section-three">
+                    <h3>Your data, <div class="color">your rules</div></h3>
+                    <p>Proton provides easy-to-use encrypted email, calendar, file storage, VPN, and much more, built on the principle of your data, your rules.</p>
+                    <div class="boxs3">
+                        <div class="boxs3a">
+                            <div class="boxs3a1">
+                                <a href="https://proton.me/mail">
+                                    <img src="./images/icon-mail.svg" alt="">
+                                    <p>Protect your communications with encrypted email that is private by default.</p>
+                                    <div class="discover">
+                                        <h4><strong>Discover Proton Mail</strong></h4>
+                                        <i class="fas fa-angle-right"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="boxs3a">
+                            <div class="boxs3a1">
+                                <a href="https://proton.me/calendar">
+                                    <img src="./images/icon-calendar.svg" alt="">
+                                    <p>Your calendar is a record of your life. Keep it safe with our encrypted calendar.</p>
+                                    <div class="discover">
+                                        <h4><strong>Discover Proton Calendar</strong></h4>
+                                        <i class="fas fa-angle-right"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="boxs3a">
+                            <div class="boxs3a1">
+                                <a href="https://proton.me/drive">
+                                    <img src="./images/icon-drive.svg" alt="">
+                                    <p>Secure your files with encrypted cloud storage that gives you control of your data.</p>
+                                    <div class="discover">
+                                        <h4><strong>Discover Proton Drive</strong></h4>
+                                        <i class="fas fa-angle-right"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="boxs3a">
+                            <div class="boxs3a1">
+                                <a href="https://protonvpn.com/">
+                                    <img src="./images/icon-vpn.svg" alt="">
+                                    <p>Your gateway to online freedom. Access blocked content and browse privately.</p>
+                                    <div class="discover">
+                                        <h4><strong>Discover Proton VPN</strong></h4>
+                                        <i class="fas fa-angle-right"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-four-container">
+                <div class="section-four">
+                    <h3>Reasons why over <div class="color">70 million</div> people and businesses have signed up for proton</h3>
+                    <div class="boxs4">
+                        <div class="boxs4a">
+                            <h2>Your data, your rules</h2>
+                            <p>
+                                Proton uses zero-access encryption wherever possible. This helps ensure nobody, not even Proton, can decrypt, access, or share any of your personal 
+                                information. We don’t serve ads and can’t share your data with advertisers.
+                            </p>
+                            <a href="https://proton.me/privacy">
+                                <p>Learn more</p>
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                        <div class="boxs4a">
+                            <h2>Swiss privacy</h2>
+                            <p>
+                                Proton is based in Switzerland. This means all user data is protected by strict Swiss privacy laws. We are a neutral and 
+                                safe haven for your personal data, committed to defending your freedom. 
+                            </p>
+                            <a href="https://proton.me/about">
+                                <p>Learn more</p>
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                        <div class="boxs4a">
+                            <h2>Security made easy</h2>
+                            <p>
+                                Proton services are so easy to use that anyone can use them. Easy Switch lets you instantly import and encrypt your data from 
+                                Google or other services with a single click. 
+                            </p>
+                            <a href="https://proton.me/easyswitch">
+                                <p>Learn more</p>
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                        <div class="boxs4a">
+                            <h2>Security through transparency</h2>
+                            <p>
+                                Proton was founded by scientists, and we believe in research, peer review, and transparency. All our apps are open source and independently 
+                                audited so that anyone can use them, inspect them, and trust them. 
+                            </p>
+                            <a href="https://proton.me/community/open-source">
+                                <p>Learn more</p>
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                        <div class="boxs4a">
+                            <h2>People before profits</h2>
+                            <p>
+                                Proton’s core values include integrity and always doing the right thing. Freedom, privacy, and security are deeply held beliefs that we will defend at any cost. 
+                                That’s why we continue to provide free services for a better society.
+                            </p>
+                            <a href="https://proton.me/about/impact">
+                                <p>Learn more</p>
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                        <div class="boxs4a">
+                            <h2>Strength through community</h2>
+                            <p>
+                                Proton is more than just a company. It is a movement of millions of volunteers, contributors, and users committed to a 
+                                better internet that respects and protects individual rights by default.
+                            </p>
+                            <a href="https://proton.me/community">
+                                <p>Learn more</p>
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-five-container">
+                <div class="section-five">
+                    <div class="boxs5">
+                        <div class="boxs5a">
+                            <p>An alternative to the ad-based revenue model of free services like Gmail which actively scan your emails to deliver relevant ads to you online.</p>
+                            <img src="./images/forbes.avif" alt="">
+                        </div>
+                        <div class="boxs5a">
+                            <p>ProtonMail hosts its servers in Switzerland... so all user data is protected by strict Swiss privacy laws.</p>
+                            <img src="./images/wsj.avif" alt="">
+                        </div>
+                        <div class="boxs5a">
+                            <p>ProtonVPN has staked its reputation as a privacy-focused company.</p>
+                            <img src="./images/pc.avif" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-six-container">
+                <div class="section-six">
+                    <div class="boxs6img">
+                        <img src="./images/img1.avif" alt="">
+                        <div class="boxs6a">
+                            <h3>Our story begins at CERN, where the web was born</h3>
+                            <p>Proton was founded in 2014 by scientists who met at CERN and united over a shared vision of a more secure and private internet. 
+                                We are scientists, engineers, and specialists working to protect civil liberties online.</p>
+                            <a href="https://proton.me/about">
+                                <p>Learn more</p>
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="boxs6img">
+                        <img src="./images/img2.avif" alt="">
+                        <div class="boxs6a">
+                            <h3>We believe a better world starts with privacy</h3>
+                            <p>Proton is building a better internet where privacy is the default and where you are in control. 
+                                Join the fight for privacy and protect your data with Proton’s privacy-first online services. </p>
+                            <a href="https://proton.me/privacy">
+                                <p>Learn more</p>
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section seven-container">
+                <div class="section-seven">
+                    <img src="./images/p.svg" alt="">
+                    <h3>Proton is privacy <br><div class="color">Choose a better internet</div></h3>
+                    <p>One account for all Proton services</p>
+                    <button class="button"><a href="https://proton.me/pricing">Create a free account</a></button>
+                    <div class="boxs7">
+                        <img src="./images/1mail.svg" alt="">
+                        <img src="./images/4vpn.svg" alt="">
+                        <img src="./images/3drive.svg" alt="">
+                        <img src="./images/2calendar.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="div-eight-container">
+                <div class="div-eight">
+                    <img src="./images/img3.avif" alt="">
+                    <div class="boxs8">
+                        <img src="./images/proton-for-business-7593cbc0084076319b6c51c9b46ea74d.svg" alt="">
+                        <h3>Secure your business</h3>
+                        <p>In addition to protecting millions of individuals, Proton secures more than 10,000 businesses, including many 
+                            of the world’s largest public and private organizations.</p>
+                        <p>Learn how Proton can improve the security of your business and comply with data protection and privacy laws.</p>    
+                        <button class="button"><a href="https://proton.me/business">Get Proton for Business</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
