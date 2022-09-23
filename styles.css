@@ -6,7 +6,7 @@
 }
 
 body {
-    width: 100%;
+    width: 1900px;
     margin: auto;
 }
 
@@ -30,9 +30,10 @@ nav {
 
 .section-one-container {
     width: 100%;
-    height: 800px;
+    height: 790px;
     background-image: url(./images/background.webp);
     background-position: center;
+    background-size: cover;
 }
 
 .intro-container {
@@ -81,12 +82,144 @@ a {
     box-shadow: 5px 2px 1px #fff;
 }
 
-.icon p {
-    margin: 20px 0;
+.icon p,
+.boxs2 p {
+    margin: 30px 0;
 }
 
 .icon:hover {
     background-color: rgb(239, 225, 249);
-    box-shadow:(22.7119px 23.941px 80px rgba(74,45,197,.11)
+    box-shadow:(22.7119px 23.941px 80px rgba(74,45,197,.11));
 }
 
+.section-two-container {
+    margin-top: 200px;
+    width: 100%;
+}
+
+.section-two {
+    height: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.boxs2 {
+    width: 700px;
+    height: 200px;
+}
+
+h3 {
+    font-size: 34px;
+    font-weight: 500;
+}
+
+.button {
+    font-size: 26px;
+    font-weight: 700;
+    background-color: blueviolet;
+    padding: 20px 40px;
+    border-radius: 40px;
+    border-style: none;
+}
+
+.button a {
+    color: #fff;
+}
+
+.button:hover {
+    /* cursor: default; */
+    background-color: rgb(117, 37, 192);
+}
+
+
+.boxs3 img {
+    height: 45px;
+    /* border: 1px solid #000; */
+}
+
+.section-three-container {
+    width: 100%;
+}
+
+.section-three {
+    margin-top: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-three h3,
+.section-three p {
+    text-align: center;
+}
+
+.section-three > p {
+    width: 800px;
+    margin: 40px auto;
+    font-size: 20px;
+}
+
+.color {
+    display: inline;
+    color: blueviolet;
+}
+
+.boxs3 {
+    margin-top: 180px;
+    width: 850px;
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 1px solid #000; */
+}
+
+.boxs3a,
+.boxs3b,
+.boxs3c,
+.boxs3d {
+    padding: 20px;
+    /* border-left: 1px solid #000; */
+}
+
+.boxs3a {
+    border-bottom: 1px solid #ddd;
+}
+.boxs3b {
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.boxs3c {
+    border-right: 1px solid #ddd;
+}
+
+.boxs3a1 {
+    width: 380px;
+    padding: 30px;
+    border: 1px solid blueviolet;
+    border-radius: 20px;
+}
+
+.boxs3a a p,
+.boxs3b a p,
+.boxs3c a p,
+.boxs3d a p {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.discover {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* color: blueviolet; */
+}
+
+h4 strong,
+.discover i {
+    color: blueviolet;
+}
+
+.section-four-container {
+    width: 100%;
+    margin-top: 300px;
+}
