@@ -53,6 +53,7 @@ nav {
 
 h1 {
     font-size: 52px;
+    font-weight: 500;
     text-align: center;
 }
 
@@ -195,8 +196,8 @@ h3 {
 .boxs3a1 {
     width: 380px;
     padding: 30px;
-    border: 1px solid blueviolet;
     border-radius: 20px;
+    border: 1px solid #fff;
 }
 
 .boxs3a a p,
@@ -214,12 +215,96 @@ h3 {
     /* color: blueviolet; */
 }
 
+.underline-animation,
+.underline {
+    display: inline-block; /*used to make the underline span same as the width of the text*/
+    position: relative;
+    color: blueviolet;
+}
+
+.underline-animation:after,
+.underline:after {
+    content: '';
+    position: absolute;
+    width: 100%; /*with :after and positioning allows to place the effect under the content*/
+    transform: scaleX(0); /*used to hide initially the element*/
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: blueviolet;
+    transform-origin: bottom left; /*animate the underline*/
+    transition: transform 0.25s ease-out; /*animate the underline*/
+}
+
 h4 strong,
 .discover i {
     color: blueviolet;
 }
 
+.boxs3a,
+.boxs3b,
+.boxs3c,
+.boxs3d {
+    padding: 20px;
+    /* border-left: 1px solid #000; */
+}
+
+.boxs3 a:hover .boxs3a1 {
+    border: 1px solid blueviolet;
+}
+
+.boxs3 a:hover .underline-animation:after {
+    /* text-decoration: underline; */
+    transform: scale(1); /*used to show the element*/
+    transform-origin: bottom left;
+}
+
+
+
 .section-four-container {
     width: 100%;
     margin-top: 300px;
+}
+
+.section-four {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-four h1 {
+    margin: 100px 0 400px 0;
+    width: 1000px;
+}
+
+.boxs4 {
+    /* width: 1600px; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+}
+
+.boxs4a {
+    width: 500px;
+    margin-top: 20px;
+}
+
+.boxs4a p {
+    margin: 20px 0;
+}
+
+.boxs4a a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.boxs4a i {
+    color: blueviolet;
+}
+
+.boxs4a a:hover .underline:after {
+    /* text-decoration: underline; */
+    transform: scale(1); /*used to show the element*/
+    transform-origin: bottom left;
 }
