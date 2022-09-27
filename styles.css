@@ -10,6 +10,10 @@ body {
     margin: auto;
 }
 
+p {
+    line-height: 32px;
+}
+
 nav {
     margin: 40px 100px;
     display: flex;
@@ -103,6 +107,10 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.section-two img {
+    margin-right: -90px;
 }
 
 .boxs2 {
@@ -293,13 +301,15 @@ h4 strong,
     margin: 20px 0;
 }
 
-.boxs4a a {
+.boxs4a a,
+.boxs6a a {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.boxs4a i {
+.boxs4a i,
+.boxs6a i {
     color: blueviolet;
 }
 
@@ -307,4 +317,152 @@ h4 strong,
     /* text-decoration: underline; */
     transform: scale(1); /*used to show the element*/
     transform-origin: bottom left;
+}
+
+.section-five-container {
+    width: 100%;
+    height: 600px;
+}
+
+.boxs5 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 200px 100px;
+}
+
+.boxs5a {
+    width: 700px;
+    height: 400px;
+    background: linear-gradient(#6926cd, #430f6d);
+    border-radius: 30px;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.boxs5a p {
+    color: #fff;
+    font-size: 24px;
+}
+
+.boxs5a img {
+    border-radius: 100px;
+}
+
+.boxs5a div {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.boxs5a div p {
+    font-size: 18px;
+}
+
+.section-six-container {
+    width: 100%;
+    margin-top: 250px;
+}
+
+.section-six {
+    display: flex;
+    gap: 300px;
+    margin-left: 150px;
+}
+
+.boxs6img {
+    width: 600px;
+    position: relative;
+    z-index: 0;
+}
+
+.boxs6img img {
+    width: 600px;
+    height: 760px;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.boxs6a {
+    position: absolute;
+    z-index: 1;
+    left: -150px;
+    top: 150px;
+    width: 600px;
+    height: 400px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0.1px 0.1px 20px 0.5px #bbb;
+}
+
+.boxs6a > p {
+    margin: 30px 0;
+    color:black;
+    font-size: 18px;
+}
+
+.boxs6a a:hover .underline:after {
+    /* text-decoration: underline; */
+    transform: scale(1); /*used to show the element*/
+    transform-origin: bottom left;
+}
+
+.section-seven-container {
+    width: 100%;
+}
+
+.section-seven {
+    margin-top: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    text-align: center;
+}
+
+.section-seven img {
+    width: 100px;
+}
+
+.section-seven button {
+    margin: 40px 0;
+}
+
+.section-seven p {
+    font-size: 20px;
+}
+
+.section-eight-container {
+    width: 100%;
+}
+
+.section-eight {
+    margin-top: 200px;
+    display: flex;
+    gap: 80px;
+}
+
+.section-eight img {
+    margin-left: -120px;
+}
+
+.boxs8 {
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+.boxs8 img {
+    height: 90px;
+    margin-left: -30px;
+}
+
+.boxs8 button {
+    margin-top: -15px;
+    width: fit-content;
 }
