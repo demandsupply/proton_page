@@ -28,6 +28,136 @@ nav {
     margin: 0 100px;
 }
 
+.menu-products {
+    width: 750px;
+    height: 420px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.menu-products p {
+    font-size: 12px;
+    line-height: 18px;
+    color: #000;
+}
+
+.menu-products-container p {
+    margin-left: 50px;
+}
+
+.menu-products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+
+}
+
+.menu-products-box {
+    /* border: 1px solid #000; */
+    width: 350px;
+    height: 120px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.menu-products-box img {
+    height: 35px;
+}
+
+.pbusiness {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 29px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #eeeaff;
+}
+
+.pbusiness img {
+    height: 35px;
+}
+
+.pbusiness i {
+    /* background-color: blueviolet; */
+    margin-right: 20px;
+    border-radius: 100px;
+    padding: 10px;
+    width: 35px;
+    text-align: center;
+}
+
+.pbusiness:hover {
+    background-color: #e2dbff;
+    transition: 0.3s;
+}
+
+.pbusiness:hover i {
+    background-color: blueviolet;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.menu-products-box:hover {
+    background-color: #eeeaff;
+}
+
+.menu-who {
+    width: 750px;
+    height: 420px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    display: flex;
+    gap: 40px;
+    /* padding: 20px; */
+}
+
+.menu-who p {
+    font-size: 12px;
+    line-height: 18px;
+    color: #000;
+    margin-top: 10px;
+}
+
+.menu-who ul:first-of-type {
+    margin: 20px;
+}
+
+.menu-who ul:last-of-type {
+    background-color: rgb(247, 247, 247);
+    border-radius: 10px;
+}
+
+.menu-who ul:last-of-type div {
+    margin: 20px;
+}
+
+.menu-who li {
+    margin-bottom: 0px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.menu-who .hiring {
+    color: #6d4aff;
+    margin-left: 10px;
+}
+
+.menu-who li:hover {
+    background-color: #eeeaff;
+}
+
+.menu-who li:hover h4 {
+    color: blueviolet;
+}
+
+.menu-who div li:first-of-type:hover {
+    background-color: #f7f7f7;
+}
+
 .section-one {
     margin: auto;
 }
